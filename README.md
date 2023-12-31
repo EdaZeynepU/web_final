@@ -1,6 +1,8 @@
 
 <h1>Student Management Website</h1>
 
+you can visit this side from that link: https://edazeynepu.github.io/web_final/html/login.html
+
 Features
 View Your Notes: Access your academic records and course-related information.
 Class Management: Instructors can edit or delete classes as needed.
