@@ -1,50 +1,70 @@
 {
     "students": [
-        {
-            "student_id":200807001,
-            "name":"Merve",
-            "surname":"Kartal",
-            "classes":{"3033 Database":{"midterm":100,"final":90},"3500 Web":{"midterm":10,"final":30},"5485 NLP":{"midterm":48,"final":100}},
-            "password":"xy95",
-            "city":"Ankara",
-            "country":"Türkiye",
-            "email":"xy@edu.tr",
-            "gpa":2,
-            "current_year":"",
-            "start_year":"",
-            "end_year":"",
-            "advisor":"x"
+      {
+        "student_id": 23090794,
+        "name": "Burak",
+        "surname": "Çelik",
+        "classes": {
+          "3033 Database": { "midterm": 86, "final": 91 },
+          "3500 Web": { "midterm": 83, "final": 88 },
+          "5485 NLP": { "midterm": 78, "final": 84 }
         },
-        {
-            "student_id":210807002,
-            "name":"Yunus",
-            "surname":"Öztürk",
-            "classes":{"3033 Database":{"midterm":30,"final":20},"3500 Web":{"midterm":90,"final":80},"5485 NLP":{"midterm":80,"final":60}},
-            "password":"ab00",
-            "city":"Adana",
-            "country":"Türkiye",
-            "email":"ab@edu.tr",
-            "gpa":2,
-            "current_year":"",
-            "start_year":"",
-            "end_year":"",
-            "advisor":"x"
+        "password": "burak_password",
+        "city": "Ankara",
+        "country": "Türkiye",
+        "email": "burak.c@example.com",
+        "gpa": 3.8,
+        "advisor": "Dr. Yıldız"
+      }
+      ,
+      {
+        "student_id": 23090795,
+        "name": "Melih",
+        "surname": "Yılmaz",
+        "classes": {
+          "3033 Database": { "midterm": 87, "final": 92 },
+          "3500 Web": { "midterm": 85, "final": 90 },
+          "5485 NLP": { "midterm": 80, "final": 86 }
         },
-        {
-            "student_id":200807003,
-            "name":"Selim",
-            "surname":"Gülenç",
-            "classes":{"3033 Database":{"midterm":60,"final":80},"3500 Web":{"midterm":20,"final":30},"5485 NLP":{"midterm":80,"final":100}},
-            "password":"a",
-            "city":"Muğla",
-            "country":"Türkiye",
-            "email":"na@edu.tr",
-            "gpa":2,
-            "current_year":"3",
-            "start_year":"2020",
-            "end_year":"2025",
-            "advisor":"x"
-        },{
+        "password": "melih_password",
+        "city": "İstanbul",
+        "country": "Türkiye",
+        "email": "melih.y@example.com",
+        "gpa": 3.9,
+        "advisor": "Dr. Aydın"
+      },
+      {
+        "student_id": 23090797,
+        "name": "Emir",
+        "surname": "Demir",
+        "classes": {
+          "3033 Database": { "midterm": 88, "final": 92 },
+          "3500 Web": { "midterm": 85, "final": 90 },
+          "5485 NLP": { "midterm": 81, "final": 87 }
+        },
+        "password": "emir_password",
+        "city": "Antalya",
+        "country": "Türkiye",
+        "email": "emir.d@example.com",
+        "gpa": 3.9,
+        "advisor": "Dr. Yılmaz"
+      },
+      {
+        "student_id": 23090796,
+        "name": "Servet",
+        "surname": "Acar",
+        "classes": {
+          "3033 Database": { "midterm": 87, "final": 91 },
+          "3500 Web": { "midterm": 84, "final": 89 },
+          "5485 NLP": { "midterm": 79, "final": 86 }
+        },
+        "password": "servet_password",
+        "city": "İzmir",
+        "country": "Türkiye",
+        "email": "servet.a@example.com",
+        "gpa": 3.8,
+        "advisor": "Dr. Arslan"
+      },{
             "student_id": 210807001,
             "name": "John",
             "surname": "Doe",
