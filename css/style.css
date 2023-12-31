@@ -1,0 +1,218 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+/* background image setting here */
+body{
+    height: 100vh;
+    background: url("../images/login_bg_5.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* styles searchFilter */
+#searchFilter{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 16px ;
+}
+
+/* shortcut for make a flex elemnt with row direction */
+.flex-row{
+    display: flex;
+}
+
+
+/* shortcut for make a flex element and space-evenly justify */
+.flex-evenly{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* space named classes are for give a little */
+.space-md{
+    display: inline-block;
+    width: 35px;
+    height: 1px;
+}
+.space-lg{
+    display: inline-block;
+    width: 70px;
+    height: 1px;
+}
+
+.space-md-vertical{
+    height: 35px;
+    width: 1px;
+}
+
+/* shortcut for make the elemnt flex and column direction */
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* it makes the content full page */
+.full-page{
+    height: 100vh;
+    width: 100vw;
+}
+
+/* disables border and outline */
+.no-border{
+    border: none;
+    outline: none;
+}
+
+/* make background transparent */
+.no-bg{
+    background: transparent;
+}
+
+/* to make something not visible */
+.hidden{
+    display: none !important;
+}
+
+/*  when I want to center a thing with flex */
+.flex-center{
+    display: flex;
+    justify-content: center;    
+    align-items: center;    
+}
+
+/* to make little animation and good to eyes */
+.smooth-transition{
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+/* to show its clickble */
+button{
+    cursor: pointer;
+}
+
+/* gives empty space to the main content  */
+.main-content{
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(50px);
+    flex: 1;
+    overflow-y: scroll;
+}
+
+/* decoration for boxes */
+.main-segment{
+    height: 200px;
+    width: 30vw;
+}
+
+
+/* to make info divs beautier */
+.home-info-div{
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 30px;
+    width: 18vw;
+    min-width: 230px;
+    height: 20vh;
+    min-height: 120px;
+    background: linear-gradient(140deg,rgb(210, 210, 210)0%, rgb(255, 255, 255) 30%, rgb(255, 255, 255) 70%,rgb(210, 210, 210) 100%) ;
+    border-radius: 40px;
+}
+
+/* for responsive design prevents overflow */
+#main-content-home{
+    flex-wrap: wrap;
+    padding: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+
+/* decorates the disebar links */
+aside a{
+    text-decoration: none;
+    color: black;
+    font-size: .92rem;
+}
+
+
+/* it show the form part wehre to start and where to end */
+.adding-form{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 3vh 2vw;
+    padding: 30px;
+}
+
+/* for overflowing it wraps to content then you can see clearly */
+.adding-form .input-part{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.input-header{
+    text-align: center;
+}
+
+/* custom style for the inputs just to be pretty */
+.input-styled{
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 12px 18px;
+    border-radius: 15px;
+    outline: none;
+    margin: 4px 0;
+}
+
+
+
+/* those 3 shapes the button make them pretty */
+.btn{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 8px 28px;
+    border: transparent;
+    border-radius: 15px;
+    width: fit-content;
+    max-height: 60px;
+}
+.btn:hover{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.btn:active{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.info{
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255,0.9);
+    width: 40vw;
+    height: fit-content;
+
+
+}
+
+
+/* when the screen get small media edit the content */
+
+@media screen and (max-width: 700px) {
+    .adding-form{
+        flex-direction: column;
+    }
+
+    .adding-form button{
+        margin-top: 20px;
+        width: 100%;
+    }
+  }

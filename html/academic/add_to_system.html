@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bars.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/dataClassAcademic.js" defer></script>
+    <script src="/js/bars.js" defer></script>
+    <script src="/js/addToSystem.js" defer></script>
+    <title>add to system</title>
+</head>
+
+<body>
+    <div class="flex-row full-page">
+        <aside class="flex-col" id="sidebar">
+            <img src="/images/logo.png" width="150px" alt="logo" class="logo">
+            <div>
+                <button class="sidebar-btn no-border no-bg smooth-transition">Not Listesi<span>→</span></button>
+                <button class="sidebar-btn no-border no-bg smooth-transition">Ders ve Not Ekle<span>→</span></button>
+                <button class="sidebar-btn no-border no-bg smooth-transition">Öğrencilerin
+                    Notları<span>→</span></button>
+                <button class="sidebar-btn no-border no-bg smooth-transition">Genel Duyurular<span>→</span></button>
+            </div>
+        </aside>
+        <div class="flex-col nav-content-wrapper">
+            <nav class="flex-row">
+                <div>
+                    <button onclick="ToogleSidebar()" class="no-bg no-border"><img src="/images/menu-toogle.png" width="25px" alt="menu"></button>
+                    <span>2023-2024 Güz Dönemi</span>
+                </div>
+                <div>
+                    
+                    <a class="no-bg no-border" href="/html/academic/"><img src="/images/home.png" width="30px" height="30px" alt="home"></a>
+                    <div class="space-lg"></div>
+                    <span class="name">Name and Student number</span>
+                    <img src="/images/user.png" width="50px" alt="user">
+                </div>
+            </nav>
+            <div class="main-content">
+                <div class="space-md-vertical"></div>
+                <h2 class="input-header">Ders Ekle</h2>
+                <div class="adding-form">
+                    <div class="input-part">
+                        <div>
+                            <label for="class-name-input">Ders ismi:</label>
+                            <input class="input-styled no-border" id="class-name-input" type="text"
+                                placeholder="class name" />
+
+                        </div>
+                        <div><label for="grading-scale-input">Notlandırma Şekli:</label>
+                            <select class="input-styled no-border" name="grading-scale-input" id="grading-scale-input">
+                                <option value="7">7</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button onclick="CreateClass()" class="no-border btn">Ekle</button>
+
+                </div>
+                
+                <h2 class="input-header">Not Ekle</h2>
+                <div class="adding-form">
+                    <div class="input-part">
+                        <div><label for="selected-class">Seçilen Ders:</label>
+                            <select class="input-styled no-border" name="selected-class" id="selected-class">
+                                <option value="ders">ders Lorem ipsum dolor sit amet. ders</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="student-id-input">Öğrenci Numarası:</label>
+                            <input class="input-styled no-border" id="student-id-input" type="number"
+                                placeholder="11111111111" />
+                        </div>
+                        <div>
+                            <label for="student-name-input">Öğrenci İsmi:</label>
+                            <input class="input-styled no-border" id="student-name-input" type="text"
+                                placeholder="Öğrencinin İsmi" />
+                        </div>
+                        <div>
+                            <label for="student-mid-input">Vize Notu:</label>
+                            <input class="input-styled no-border" id="student-mid-input" type="number"
+                                placeholder="80" />
+                        </div>
+                        <div>
+                            <label for="student-fin-input">Final Notu:</label>
+                            <input class="input-styled no-border" id="student-fin-input" type="number"
+                                placeholder="90" />
+                        </div>
+                    </div>
+                    <button onclick="" class="no-border btn">Ekle</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

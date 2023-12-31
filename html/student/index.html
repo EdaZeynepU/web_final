@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bars.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/dataClass.js" defer></script>
+    <script src="/js/auth.js" defer></script>
+    <script src="/js/studentPage.js" defer></script>
+    <script src="/js/bars.js" defer></script>
+    <link rel="stylesheet" href="/css/table.css">
+    <title>student home page</title>
+</head>
+
+<body>
+    <div class="flex-row full-page">
+        <aside class="flex-col" id="sidebar">
+            <img src="/images/logo.png" width="150px" alt="logo" class="logo">
+            <div>
+                <button onclick="changePage('#main-content-grades')"
+                    class="sidebar-btn no-border no-bg smooth-transition" href="./html/student/grades.html">Not
+                    Listesi<span>→</span></button>
+                <button  onclick="changePage('#main-content-general-info')" class="sidebar-btn no-border no-bg smooth-transition">Genel Bilgiler<span>→</span></button>
+                <!-- <button  class="sidebar-btn no-border no-bg smooth-transition">Danışman Bilgileri<span>→</span></button> -->
+                <button onclick="changePage('#main-content-announcement')"
+                    class="sidebar-btn no-border no-bg smooth-transition">Genel Duyurular<span>→</span></button>
+                <button onclick="exit('student')"
+                    class="sidebar-btn no-border no-bg smooth-transition">Çıkış<span>→</span></button>
+            </div>
+        </aside>
+        <div class="flex-col nav-content-wrapper">
+            <nav class="flex-row">
+                <div>
+                    <button onclick="ToogleSidebar()" class="no-bg no-border"><img src="/images/menu-toogle.png"
+                            width="25px" alt="menu"></button>
+                    <span>2023-2024 Güz Dönemi</span>
+                </div>
+                <div>
+                    <button class="no-bg no-border" onclick="changePage('#main-content-home')"><img
+                            src="/images/home.png" width="30px" height="30px" alt="home"></button>
+                    <div class="space-lg"></div>
+                    <p class="name"></p>
+                    <p class="number"></p>
+                    <img src="/images/user.png" width="50px" alt="user">
+                </div>
+            </nav>
+
+            <div class="main-content">
+                <div id="main-content-home">
+                    <div class="home-info-div flex-col">
+                        <p>AGNO</p>
+                        <p class="gpa-student"></p>
+                    </div>
+                    <div class="home-info-div flex-col">
+                        <p>Mevcut Ders Sayısı</p>
+                        <p class="count-class"></p>
+                    </div>
+                    <div class="home-info-div flex-col">
+                        <p>Danışman Bilgileri</p>
+                        <p class="info-advisor"></p>
+                    </div>
+
+                </div>
+                <div id="main-content-grades" class="hidden">
+                    <table>
+                        <thead>
+                            <th>Ders İsmi</th>
+                            <th>Vize</th>
+                            <th>Final</th>
+                            <th>Ölçek</th>
+                            <th>Harf Notu</th>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div id="main-content-general-info" class="hidden">
+                    <div class="space-md-vertical"></div>
+                        <div class=" flex-center">
+                            <div class="flex-col info">
+                                <p id="std-info-name">İsim: </p>
+                                <p id="std-info-surname">Soyisim: </p>
+                                <p id="std-info-country">Ülke: </p>
+                                <p id="std-info-city">Şehir: </p>
+                                <p id="std-info-gpa">gpa: </p>
+                                <p id="std-info-advisor">Danışman: </p>
+                            </div>
+                    </div>
+                </div>
+
+
+                <div id="main-content-announcement" class="hidden">
+                    <div class="space-md-vertical"></div>
+                    <div class="flex-center">
+
+                        <div class="home-info-div flex-col">
+                            <p>Duyuru Yok</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</body>
+
+</html>

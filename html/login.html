@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css" >
+    <link rel="stylesheet" href="../css/style.css" >
+    <script src="/js/auth.js" defer></script>
+    <!-- <script src="../js/dataClass.js" defer></script> -->
+    <title>Login</title>
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-box flex-col center-absolute rounded-border smooth-transition">
+            
+
+            <div id="login-desicion" class="flex-col">
+                <div class="flex-col">
+                    <img src="../images/student.png" alt="Öğrenci">
+                    <button onclick="loginDesicionSetter('student')" class="btn">Öğrenci girişi</button>
+                </div>
+                <div class="flex-col">
+                    <img src="../images/academic.png" alt="Öğrenci">
+                    <button onclick="loginDesicionSetter('academic')" class="btn">Akademisyen girişi</button>
+                </div>
+            </div>
+                
+            <div id="student-login" class="hidden">
+                <h1>Rain Force University</h1>
+                <h2>Login</h2>
+                <div class="flex-col">
+                <label for="user_name_stdnt" class="label-styled">Kullanıcı Adı:</label>
+                <input id="user_name_stdnt" type="email" class="input-styled smooth-transition no-border"/>
+                <label for="password_stdnt" class="label-styled">Şifre:</label>
+                <div class="input-styled password-input smooth-transition ">
+                    
+                    <input id="password_stdnt" type="password" class="password-input no-border no-bg" />
+                    <img src="../images/eye.png" height="20px" alt="">
+                    </div>
+                    <div>
+                        <button onclick="goBackToLoginDesicion('student')" class="btn">Geri dön</button>
+                        <div class="space-sm"></div>
+                        <button onclick="handleModal(true,'student')" class="btn">Yardım</button>
+                        <div class="space-sm"></div>
+                        <button onclick="login('student')" class="btn">Giriş Yap</button>
+                    </div> 
+                    </div>
+            </div>
+
+            <div id="academic-login" class="hidden">
+                <h1>Rain Force University</h1>
+                <h2>Login</h2>
+                <div class="flex-col">
+                <label for="user_name_academic" class="label-styled">Kullanıcı Adı:</label>
+                <input id="user_name_academic" type="email" class="input-styled no-border"/>
+                <label for="password_academic" class="label-styled">Şifre:</label>
+                <div class="input-styled password-input">
+                <input id="password_academic" type="password" class="password-input no-border no-bg" />
+                <img src="../images/eye.png" height="20px" alt="">
+                </div>
+                <div>
+                    <button onclick="goBackToLoginDesicion('academic')" class="btn">Geri dön</button>
+                    <div class="space-sm"></div>
+                    <button onclick="handleModal(true,'academic')" class="btn">Yardım</button>
+                    <div class="space-sm"></div>
+                    <button onclick="login('academic')" class="btn">Giriş Yap</button>
+                    
+                </div> 
+                </div>
+            </div>
+            
+        
+    </div>
+</div>
+            <div id="student-modal" class="modal-bg center-absolute hidden">
+                    
+                <div class="login-info center-absolute">
+                <h3>1-Öğrenci Kimlik Yönetimi Aktivasyon İşlemleri </h3>
+
+                <p>Üniversitemize 2017 yılından itibaren kayıt yaptıran öğrencilerimizin bilişim hizmetlerinden yararlanabilmeleri için gerekli kullanıcı adı ve şifre öğrenme yöntemi yenilenmiştir. Buradan  erişebileceğiniz sayfada yer alan görseldeki adımları gerçekleştiren öğrenciler internet üzerinden kendilerine ait bilgilere erişebilmektedir. Herhangi bir sorunla karşılaşan öğrenciler için broşürde yapılması gerekenler anlatılmıştır.
+                </p>
+                <h4>2-Öğrenci Belge İşlemleri Sistemi Hakkında</h4>
+                
+                <p>Öğrenci belge başvuruları belge.mu.edu.tr adresinden yapılacaktır. <br/>
+                
+                2020-2021 Eğitim-Öğretim Yılı Bahar Yarıyılında yüzde yüz uzaktan öğretim yönteminin uygulandığı senkron ve asenkron derslerde devam şartı aranır. <br/>
+                
+                Senkron derslerde; öğrencinin DYS sisteminde canlı olarak derse katılması veya katılmadığı haftanın ders kaydını dönemin ilk 13 haftası için on gün içerisinde, dönemin son iki haftası için derslerin yapıldığı hafta içerisinde izleyerek Bahar Yarıyılı devam şartını yerine getirmesi gerekir. <br/>
+                
+                Asenkron derslerde; öğrencinin ders kayıtlarını dönem sonuna kadar izleyerek Bahar Yarıyılı devam şartını yerine getirmesi gerekir. <br/>
+                </p>
+                <h4>3-Üniversitemiz Mobil Uygulaması Hizmete Sunulmuştur </h4>
+                <p>
+                Üniversitemiz Mobil uygulaması App Store ve Play Store'da kullanıma açılmıştır. Mobil uygulamayı indirmek için;</p>
+                <a href="#" target="_self" rel="noopener noreferrer" class="link-decoration block">Google Play Store</a> 
+               <a href="#" target="_self" rel="noopener noreferrer" class="link-decoration block">Apple App Store</a>
+                
+               <button onclick="handleModal(false,'student')" class="close-btn no-border no-bg">X</button>
+            </div>
+        </div>
+
+        <div id="academic-modal" class="modal-bg center-absolute hidden">
+            <div class="login-info center-absolute">
+            <p class="important-info">Üniversite bünyesinde kullanılan yazılımlardaki şifre karmaşasını engellemek adına birçok yazılımda kullanılan Eduroam Şifresi ve E-posta hesabı için kullanılan E-posta şifresi birleştirilerek tek şifre halinde kullanılması planlanmıştır. Planlanan çalışma 02.05.2016 tarihinde kullanıcılara e-posta ile duyurularak uygulamaya geçirilmiştir.  OBS de bu çalışma içerisine dahil edilmiştir. </p>
+
+            <p class="important-info">Kullanıcı adı ve Şifre için Kimlik Yönetim Bilgilerinizi Girmelisiniz (Kurumsal E-Posta Hesap Bilgileri)</p>
+            <p>Şifre değişimiyle ilgili işlemleriniz eskiden olduğu gibi <a href="#" rel="noopener noreferrer">https://sifre.mu.edu.tr</a> adresinden SMS desteği (Yıllık 10 SMS) ile yapılabilmektedir. İnternet üzerinden şifre değişimi yapılamaması/yapılmaması durumunda, şifre Bilgi İşlem Daire Başkanlığında şifre talep eden kişi tarafından elden teslim alınmalıdır. Bilgi İşlem Daire Başkanlığı tarafından, telefon ile şifre değişim ve yenileme işlemi yapılmamaktadır.</p>
+           <p>Bilgi İşlem Dairesi Başkanlığı</p>
+           <button onclick="handleModal(false,'academic')" class="close-btn no-border no-bg">X</button>
+        </div></div>
+    </div>
+</body>
+</html>

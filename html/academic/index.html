@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bars.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/table.css">
+    <script src="../../js/dataClassAcademic.js" defer></script>
+    <script src="../../js/auth.js" defer></script>
+    <script src="../../js/academicPage.js" defer></script>
+    <script src="../../js/bars.js" defer></script>
+    
+    <title>academic home page</title>
+</head>
+<body>
+    <div class="flex-row full-page">
+        <aside class="flex-col" id="sidebar">
+            <img src="/images/logo.png" width="150px" alt="logo" class="logo">
+            <div >
+                <button onclick="changePage('#main-content-add-to-system')" class="sidebar-btn no-border no-bg smooth-transition">Ders Ekleme Atama<span>→</span></button>
+                <button onclick="changePage('#main-content-grades')" class="sidebar-btn no-border no-bg smooth-transition">Not Listesi<span>→</span></button>
+                 <!-- <button onclick="changePage('#main-content-addStd')" class="sidebar-btn no-border no-bg smooth-transition">Öğrenci Ekleme<span>→</span></button> -->
+                 <button onclick="changePage('#main-content-announcement')" class="sidebar-btn no-border no-bg smooth-transition">Genel Duyurular<span>→</span></button>
+                <button onclick="exit()" class="sidebar-btn no-border no-bg smooth-transition">Çıkış<span>→</span></button>
+            </div>
+        </aside>
+        <div class="flex-col nav-content-wrapper">
+        <nav class="flex-row">
+            <div>
+                <button onclick="ToogleSidebar()" class="no-bg no-border"><img src="/images/menu-toogle.png" width="25px" alt="menu"></button>
+                <span>2023-2024 Güz Dönemi</span>
+            </div>
+            <div>
+                <button onclick="changePage('#main-content-home')" class="no-bg no-border"><img src="/images/home.png" width="30px" height="30px" alt="home"></button>
+                <div class="space-lg"></div>
+                <span class="name"></span>
+                <img src="/images/user.png" width="50px" alt="user">
+            </div>
+        </nav>
+            <div class="main-content">
+                <div id="main-content-home" >
+                <div class="home-info-div flex-col">
+                    <p>Toplam Öğrenci Sayısı</p>
+                    <p class="total-student"></p>
+                </div>
+                <div class="home-info-div flex-col">
+                    <p>Toplam Ders Sayısı</p>
+                    <p class="total-class"></p>
+                </div>
+                <div class="home-info-div flex-col">
+                    <p>Ortalama AGNO</p>
+                    <p class="avg-gpa"></p>
+                </div>
+                </div>
+
+                <div id="main-content-add-to-system" class="hidden">
+                    <div class="space-md-vertical"></div>
+                    <h2 class="input-header">Ders Ekle</h2>
+                    <form class="adding-form">
+                        <div class="input-part">
+                            <div>
+                                <label for="class-name-input">Ders ismi:</label>
+                                <input class="input-styled no-border" id="class-name-input" type="text" required
+                                    placeholder="class name" />
+    
+                            </div>
+                            <div><label for="grading-scale-input">Notlandırma Şekli:</label>
+                                <select class="input-styled no-border" name="grading-scale-input" id="grading-scale-input">
+                                    <option value="7">7</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button onclick="createClass()" class="no-border btn">Ekle</button>
+    
+                    </form>
+                    
+                    <h2 class="input-header">Not Ekle</h2>
+                        <form class="adding-form">
+                            <div class="input-part">
+                                 <label for="selected-class">Seçilen Ders:
+                                <select class="input-styled no-border" name="selected-class" id="selected-class">
+                                </select></label>
+                                <label for="student-id-input">Öğrenci Numarası:
+                                <input class="input-styled no-border" id="student-id-input" type="number" required
+                                    placeholder="11111111111" /></label>
+                                <label for="student-name-input">Öğrenci İsmi:
+                                <input class="input-styled no-border" id="student-name-input" type="text" required
+                                    placeholder="Öğrencinin İsmi" /></label>
+                                <label for="student-surname-input">Öğrenci Soyismi:
+                                <input class="input-styled no-border" id="student-surname-input" type="text" required
+                                    placeholder="Öğrencinin Soyismi" /></label>
+                                <label for="student-mid-input">Vize Notu:
+                                <input class="input-styled no-border" id="student-mid-input" type="number" min="0" max="100" required
+                                    placeholder="80" /></label>
+                                <label for="student-fin-input">Final Notu:
+                                <input class="input-styled no-border" id="student-fin-input" type="number" min="0" max="100" required
+                                    placeholder="90" /></label>
+                            </div>
+                           
+                        <button id="add-class-to-student"  class="no-border btn">Ekle</button>
+                        </form>
+    
+                    </div>
+                <div id="main-content-grades" class="hidden">
+                    <div id="searchFilter">
+                    <label for="keyword-input">Anahtar Kelime:
+                        <input class="input-styled no-border" id="keyword-input" type="text" required
+                            placeholder="Anahtar Kelime" /></label>
+                        <button id="search-student" onclick="HandleTable()"  class="no-border btn">Ara</button></div>
+                    <table>
+                        <thead>
+                            <th>Öğrenci İsmi</th>
+                            <th>Ders İsmi</th>
+                            <th>Vize</th>
+                            <th>Final</th>
+                            <th>Ölçek</th>
+                            <th>Harf Notu</th>
+                            <th>Kontrol</th>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="main-content-announcement" class="hidden">
+                    <div class="space-md-vertical"></div>
+                    <div class="flex-center">
+
+                        <div class="home-info-div flex-col">
+                            <p>Duyuru Yok</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div id="main-content-addStd" class="hidden">
+                    <div class="space-md-vertical">
+
+                    </div>
+                    <h2 class="input-header">Öğrenci Ekle</h2>
+                        <form class="adding-form">
+                            <div class="input-part">
+                                <label for="student-id-input">Öğrenci Numarası:
+                                <input class="input-styled no-border" id="student-id-input-add" type="number" required
+                                    placeholder="11111111111" /></label>
+                                <label for="student-name-input">Öğrenci İsmi:
+                                <input class="input-styled no-border" id="student-name-input-add" type="text" required
+                                    placeholder="Öğrencinin İsmi" /></label>
+                                <label for="student-surname-input">Öğrenci Soyismi:
+                                <input class="input-styled no-border" id="student-surname-input-add" type="text" required
+                                    placeholder="Öğrencinin Soyismi" /></label>
+                                <label for="student-mid-input">Vize Notu:
+                                <input class="input-styled no-border" id="student-mid-input-add" type="number" min="0" max="100" required
+                                    placeholder="80" /></label>
+                                <label for="student-fin-input">Final Notu:
+                                <input class="input-styled no-border" id="student-fin-input-add" type="number" min="0" max="100" required
+                                    placeholder="90" /></label>
+                            </div>
+                           
+                        <button id="add-class-to-student"  class="no-border btn">Ekle</button>
+                        </form>
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

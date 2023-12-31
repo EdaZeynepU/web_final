@@ -1,0 +1,23 @@
+
+table{
+    margin: 5vh 5vw;
+    padding: 20px;
+    width: calc(100% - 10vw); /*sets the tables width*/
+    background: #ffffff;
+}
+
+
+/* makes table more explicit */
+table td, table th,table{
+ border: solid 1px rgb(188, 188, 188);
+ border-collapse: collapse;
+}
+
+table th{
+    color: rgb(80, 80, 80);
+}
+
+table td, table th{
+     padding: 8px 12px;
+     
+}
