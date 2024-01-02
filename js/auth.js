@@ -8,7 +8,7 @@ let classes = JSON.parse(localStorage.getItem("classes"));
 const isFetchingNecessary = [students, academics, classes].some(e => e == null);
 
 async function fetchApi() {
-    const data = await fetch("../../web_final/api/db.json").then((res) => {//for github pages
+    const data = await fetch("../../web_final/api/db.json").then((res) => {//for github pages to see db.json
         return res.json();
     }).then(data => data);
 
