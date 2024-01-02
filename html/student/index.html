@@ -4,26 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/bars.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/dataClass.js" defer></script>
-    <script src="/js/auth.js" defer></script>
-    <script src="/js/studentPage.js" defer></script>
-    <script src="/js/bars.js" defer></script>
-    <link rel="stylesheet" href="/css/table.css">
+    <link rel="stylesheet" href="../../css/bars.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/dataClass.js" defer></script>
+    <script src="../../js/auth.js" defer></script>
+    <script src="../../js/studentPage.js" defer></script>
+    <script src="../../js/bars.js" defer></script>
+    <link rel="stylesheet" href="../../css/table.css">
     <title>student home page</title>
 </head>
 
 <body>
     <div class="flex-row full-page">
         <aside class="flex-col" id="sidebar">
-            <img src="/images/logo.png" width="150px" alt="logo" class="logo">
+            <img src="../../images/logo.png" width="150px" alt="logo" class="logo">
             <div>
                 <button onclick="changePage('#main-content-grades')"
-                    class="sidebar-btn no-border no-bg smooth-transition" href="./html/student/grades.html">Not
+                    class="sidebar-btn no-border no-bg smooth-transition">Not
                     Listesi<span>→</span></button>
-                <button  onclick="changePage('#main-content-general-info')" class="sidebar-btn no-border no-bg smooth-transition">Genel Bilgiler<span>→</span></button>
-                <!-- <button  class="sidebar-btn no-border no-bg smooth-transition">Danışman Bilgileri<span>→</span></button> -->
+                <button onclick="changePage('#main-content-general-info')"
+                    class="sidebar-btn no-border no-bg smooth-transition">Genel Bilgiler<span>→</span></button>
                 <button onclick="changePage('#main-content-announcement')"
                     class="sidebar-btn no-border no-bg smooth-transition">Genel Duyurular<span>→</span></button>
                 <button onclick="exit('student')"
@@ -33,17 +33,17 @@
         <div class="flex-col nav-content-wrapper">
             <nav class="flex-row">
                 <div>
-                    <button onclick="ToogleSidebar()" class="no-bg no-border"><img src="/images/menu-toogle.png"
+                    <button onclick="ToogleSidebar()" class="no-bg no-border"><img src="../../images/menu-toogle.png"
                             width="25px" alt="menu"></button>
                     <span>2023-2024 Güz Dönemi</span>
                 </div>
                 <div>
                     <button class="no-bg no-border" onclick="changePage('#main-content-home')"><img
-                            src="/images/home.png" width="30px" height="30px" alt="home"></button>
+                            src="../../images/home.png" width="30px" height="30px" alt="home"></button>
                     <div class="space-lg"></div>
                     <p class="name"></p>
                     <p class="number"></p>
-                    <img src="/images/user.png" width="50px" alt="user">
+                    <img src="../../images/user.png" width="50px" alt="user">
                 </div>
             </nav>
 
@@ -80,15 +80,15 @@
 
                 <div id="main-content-general-info" class="hidden">
                     <div class="space-md-vertical"></div>
-                        <div class=" flex-center">
-                            <div class="flex-col info">
-                                <p id="std-info-name">İsim: </p>
-                                <p id="std-info-surname">Soyisim: </p>
-                                <p id="std-info-country">Ülke: </p>
-                                <p id="std-info-city">Şehir: </p>
-                                <p id="std-info-gpa">gpa: </p>
-                                <p id="std-info-advisor">Danışman: </p>
-                            </div>
+                    <div class=" flex-center">
+                        <div class="flex-col info">
+                            <p id="std-info-name">İsim: </p>
+                            <p id="std-info-surname">Soyisim: </p>
+                            <p id="std-info-country">Ülke: </p>
+                            <p id="std-info-city">Şehir: </p>
+                            <p id="std-info-gpa">gpa: </p>
+                            <p id="std-info-advisor">Danışman: </p>
+                        </div>
                     </div>
                 </div>
 

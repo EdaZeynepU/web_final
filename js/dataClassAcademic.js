@@ -69,8 +69,8 @@ class Academic{
             btnedit.onclick=()=>changeGrade(student,id,className);
             btndel.classList="no-bg no-border"
             btnedit.classList="no-bg no-border"
-            edit.setAttribute("src","/images/edit.png")
-            del.setAttribute("src","/images/delete.png")
+            edit.setAttribute("src","../../images/edit.png")
+            del.setAttribute("src","../../images/delete.png")
             tdControl.classList="flex-evenly"
             btnedit.appendChild(edit);
             btndel.appendChild(del);
@@ -197,7 +197,7 @@ function deleteClassFromStorage(std,className) {
 function changeGrade(std,id,className){
     const btn=document.getElementById(id+"edit")
     const checkBox = document.createElement("img");
-    checkBox.setAttribute("src","/images/check.png")
+    checkBox.setAttribute("src","../../images/check.png")
     checkBox.setAttribute("width","30px")
     checkBox.setAttribute("height","30px")
     
@@ -217,7 +217,7 @@ function changeGrade(std,id,className){
     
     btn.onclick = () => {
         const btn1 = document.getElementById(id+"edit");
-        btn1.firstChild.setAttribute("src","/images/edit.png")
+        btn1.firstChild.setAttribute("src","../../images/edit.png")
         btn1.onclick = ()=>changeGrade(std,id,className);
         changeGradeFromHTML(std,id,className);
     };
