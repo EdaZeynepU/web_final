@@ -124,7 +124,6 @@ class Academic{
 
     addStudentClass(event){
         event.preventDefault()
-        setTimeout(() => {
         const className = document.getElementById("selected-class").value
         const id = document.getElementById("student-id-input").value
         const mid = document.getElementById("student-mid-input").value
