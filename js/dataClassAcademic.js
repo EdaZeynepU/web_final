@@ -125,8 +125,6 @@ class Academic{
     addStudentClass(event){
         event.preventDefault()
         setTimeout(() => {
-            console.log("heyyy");
-        }, 50000);
         const className = document.getElementById("selected-class").value
         const id = document.getElementById("student-id-input").value
         const mid = document.getElementById("student-mid-input").value
@@ -227,7 +225,7 @@ function changeGrade(std,id,className){
 
 function changeGradeFromHTML(std,id,className) {
     // gets classes info and inputs' value 
-    const allClasses=localStorage.getItem("classes");
+    const allClasses=JSON.parse(localStorage.getItem("classes"));
     const inputMid = document.getElementById(id+"input-mid");
     const inputFin = document.getElementById(id+"input-fin");
     // then assign it into mid and fins place
