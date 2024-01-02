@@ -8,7 +8,7 @@ let classes = JSON.parse(localStorage.getItem("classes"));
 const isFetchingNecessary = [students, academics, classes].some(e => e == null);
 
 async function fetchApi() {
-    const data = await fetch("/api/db.json").then((res) => {
+    const data = await fetch("../../web_final/api/db.json").then((res) => {//for github pages
         return res.json();
     }).then(data => data);
 
@@ -59,10 +59,6 @@ const login = (whoLogs) => {
     } else {
         user_name = document.getElementById("user_name_academic").value;
         password = document.getElementById("password_academic").value;
-        console.log(academics);
-        // const academicsAuth = Array.isArray(academics) ? academics : []
-        // console.log(academicsAuth);
-        console.log([...academics]);
         academics.map(academic => {
             if (academic.email == user_name && academic.password == password) {
                 localStorage.setItem("academic", JSON.stringify(academic));
