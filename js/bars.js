@@ -1,6 +1,6 @@
 
 
-const ToogleSidebar = () => {
+function ToogleSidebar () {
   const sideBar = document.querySelector("#sidebar");
   if (sideBar.classList.contains("closed")) {
     sideBar.classList.remove("closed");

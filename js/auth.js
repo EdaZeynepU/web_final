@@ -40,7 +40,7 @@ if (isFetchingNecessary) {
     SetDataJSON();
 }
 
-const login = (whoLogs) => {
+function login(whoLogs) {
     let url_name = window.location.href;
     url_name = url_name.substring(0, url_name.length - 15);
     console.log(url_name);
@@ -72,7 +72,7 @@ const login = (whoLogs) => {
 }
 
 
-const handleModal = (shouldOpen, which) => {
+function handleModal (shouldOpen, which) {
     const modal = document.querySelector(`#${which}-modal`);
     if (shouldOpen) {
         modal.classList.remove("hidden")
@@ -81,21 +81,21 @@ const handleModal = (shouldOpen, which) => {
     }
 }
 
-const loginDesicionSetter = (which) => {
+function loginDesicionSetter (which) {
     const loginSection = document.querySelector(`#${which}-login`);
     const desicionSection = document.querySelector("#login-desicion");
     desicionSection.classList.add("hidden");
     loginSection.classList.remove("hidden");
 }
 
-const goBackToLoginDesicion = (which) => {
+function goBackToLoginDesicion(which) {
     const loginSection = document.querySelector(`#${which}-login`);
     const desicionSection = document.querySelector("#login-desicion");
     desicionSection.classList.remove("hidden");
     loginSection.classList.add("hidden");
 }
 
-const ifLoggedIn = (who) => {
+function ifLoggedIn(who) {
     const isLogged = localStorage.getItem("isLogged");
     if (isLogged != "1") {
         let url_name = window.location.href;
