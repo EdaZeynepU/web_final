@@ -24,7 +24,7 @@ class Academic{
             optionsHTML.appendChild(option)
         });
     }
-    
+
     //sets the student table with their notes and editable
     setDataGradesStudent(keyword){
         const table = document.querySelector("tbody");
